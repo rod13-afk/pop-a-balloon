@@ -1,4 +1,4 @@
-
+import Button from "../Button";
 import "./CoverScreen.css";
 
 const CoverScreen = ({score, onStartGame, duration}) => {
