@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import CoverScreen from "../CoverScreen/CoverScreen";
+import "./Game.css"
 
 const Game = ({numberOfBalloons, gameDuration}) => {
     const [gameStarted, setGameStarted] = useState(false);
