@@ -1,5 +1,6 @@
-import Button from "../Button";
+import Button from "../Button/Button";
 import "./CoverScreen.css";
+
 
 const CoverScreen = ({score, onStartGame, duration}) => {
     <div className="intro">
@@ -18,7 +19,7 @@ const CoverScreen = ({score, onStartGame, duration}) => {
         )}
 
         <div className="action">
-            <Button onClick={onStartGame} width={wide}>
+            <Button onClick={onStartGame} width={"wide"}>
                 {score > -1 ? "Play again" : "Start game"}
             </Button>
         </div>

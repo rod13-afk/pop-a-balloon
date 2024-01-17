@@ -1,6 +1,12 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import CoverScreen from "../CoverScreen/CoverScreen";
-import "./Game.css"
+import "./Game.css";
+import Constants from "../../utils/constants";
+import Toast from "../Toast/Toast"
+import ScoreCard from "../ScoreCard/ScoreCard"
+import Button from "../Button/Button"
+import GameGrid from "../BalloonGrid/BalloonGrid"
+import { CSSTransition } from "react-transition-group";
 
 const Game = ({numberOfBalloons, gameDuration}) => {
     const [gameStarted, setGameStarted] = useState(false);
@@ -9,6 +15,8 @@ const Game = ({numberOfBalloons, gameDuration}) => {
     const [timeRemaining, setTimeRemaining] = useState(gameDuration);
     const [stop, setStop] = useState(false);
     const [hit, setHit] = useState(false);
+
+    const timerRef = useRef(null);
     
     const handleBalloonClick = (id) => {
         setScore((prevScore) => prevScore + 1);

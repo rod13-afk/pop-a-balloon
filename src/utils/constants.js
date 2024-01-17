@@ -7,3 +7,4 @@ const Constants = {
     balloonColor: '#f22c2c',
 }
 
+export default Constants;

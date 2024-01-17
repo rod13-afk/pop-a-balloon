@@ -1,6 +1,7 @@
 import React, {useState} from "//cdn.skypack.dev/react";
 import classnames from "//cdn.skypack.dev/classnames"
-import { useState } from "react";
+import Constants from "../../utils/constants"
+import "./Balloon.css"
 
 const Balloon = ({id, color, isActive, onClick}) => {
     const [isPopped, setIsPopped] = useState(false);
